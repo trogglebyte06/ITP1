@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>
+        <div>
+          Intro to Programming Lesson 1 and 2 Notes
+        </div>
+      </title>
+    </head>
+    <body>
+      <h1>
+        INTRO TO PROGRAMMING LESSON 1 AND 2
+      </h1>
+      <div>
+        <h2>
+          GLOSSARY OF TERMS
+        </h2>
+        <!--- This is a glossary section where basic definitions of terms as used in the lesson can be found -->
+        <div>
+          <p>
+            <b>AMBIGUITY:</b>
+            A phenomenon in spoken language allowing a speaker to be understood by fellow humans even when not saying everything perfectly.
+            Ambiguity is not a luxury when communicating to a computer.
+            Computers will only carry out instructions exactly as written.
+            Be careful of typos, missing structural elements, etc.
+            For this reason, computers are often lovingly said to be "stupid".
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>ATTRIBUTE:</b>
+            A parameter required by some tags which provides additional information to a browser.
+            This information is used by the browser to correctly render tag content in the html document.
+          </p>
+        </div>
+        <div id = "block">
+          <p>
+            <b>BLOCK:</b>
+            A quality of certain tags.
+            Tags are said to be block tags when they create an invisible box around content with height and width.
+            These invisible boxes can be manipulated in various ways to stylize a webpage.
+            We will learn more about this in subsequent lessons.
+            See also: <a href = "#inline">INLINE</a>
+          </p>
+        </div>
+        <div>
+          <p>
+            <b>BROWSER:</b>
+            A tool used to communicate with servers to view hosted files.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>DOCUMENT STRUCTURE:</b>
+            Document Structure refers to additional coding needed to make a functional webpage.
+            Now that we use html4, building the frame of an html document is much simpler.
+            Document Structure should also bring to mind the concept of indentation.
+            When coding, lines of code are indented to make it easier for colleagues to read and interpret.
+            Indentation can also make it easier for a programmer to identify errors in their own code.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>DOCUMENTATION:</b>
+            Documentation exists to assist developers when writing code.
+            It is easily found online through a <a href="www.google.com">google</a> search.
+            Thanks to documentation it isn't necessary to memorize every html tag.
+            Even professional developers refer to documentation and other online resources on a daily basis to get the job done.
+            The most important skill of a programmer is the ability to creatively solve abstract problems.
+            This is not a memorized skill.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>HTML:</b>
+            Hyper Text Markup Language is a language used to write documents which appear on the internet.
+            html documents are the most common form of document on the internet.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>HTTP:</b>
+            The language that browsers and servers use to communicate and transfer information over the internet.
+          <p>
+        </div>
+
+        <div id = "inline">
+          <p>
+            <b>INLINE:</b>
+            A quality of certain tags.
+            Tags are said to be inline when the content they markup is seen inline with other content around it.
+            See also: <a href = "#block"> BLOCK </a>
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>INTERNET, THE:</b>
+            The largest computer network in the world.
+            Invented in the early 90s.
+            Composed of 30 Billion html pages.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>SERVER:</b>
+            A computer especially designed to host files which it makes available to browsers upon request.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>TAG:</b>
+            A tag is an html operator which is used to manipulate text, images, videos, and other file types on an HTML document.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>VOID:</b>
+            A tag is said to be void when no content is required between opening and closing tags.
+            Consequently, no &lt;/tag&gt; is needed.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>WHITESPACE:</b>
+            The blank spaces between words and paragraphs in a webpage.
+            It should be noted that just because a line is started
+            in the text editor does not mean that a new line will
+            appear in the webpage. For whitespace to appear in the
+            webpage certain tags must be added. See the section below
+            on tags for more information about which tags can be
+            used to add whitespace to a document.
+          </p>
+        </div>
+      </div>
+
+      <span><hr></span>
+
+      <!--- THIS IS WHERE THE GLOSSARY ENDS AND THE DISCUSION ON CONCEPTS BEGINS-->
+      <div>
+        <h2>
+          CONCEPTS
+        </h2>
+        <div>
+          <table>
+            <thead>
+              <center><b>MAP OF THE INTERNET</b></center>
+            </thead>
+            <tbody>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Chrome_Logo.svg/1024px-Chrome_Logo.svg.png" width = "120" height = "120" alt="BROWSER"> 1
+                &#8644
+                <img src="https://www.unc.edu/~unclng/internet-map.gif" height = "112" width = "160" alt="THE INTERNET"> 2
+                &#8644
+                <img src="https://ititch.com/wp-content/uploads/2012/10/smtp-server.jpg" width = "180" height = "120" alt="SERVERS"> 3
+              </center>
+              <div>
+                <p>
+                  1. A Browser, <em>Source: wikipedia.com</em>
+                </p>
+                <p>
+                  2. The World Wide Web, <em>Source: unc.edu</em>
+                </p>
+                <p>
+                  3. A server hosting content, <em> Source: ititch.com</em>
+                </p>
+                <p>
+                  4. The arrows between each component represent HTTP protocols enabling communication between the different parts of the web.
+                </p>
+              </div>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <div>
+            <b>TAGS:</b>
+            <div>
+              BASIC STRUCTURE
+              <pre>
+                &lt;tag&gt;content&lt;/tag&gt;
+              </pre>
+              Examples:
+              <pre>
+                &lt;b&gt;BOLD&lt;/b&gt; = <b>BOLD</b>
+                &lt;em&gt;italics&lt;/em&gt; = <em>italics</em>
+              </pre>
+            </div>
+          <div>
+            ATTRIBUTES
+            <div>
+              <pre>
+                &lt;tag attr="value"&gt;content&lt;/tag&gt;
+              </pre>
+            </div>
+
+            <div>
+              <p>
+                Most tags take extra parameters in the opening tag called attributes which provide additional information to the browser.
+                Many tags take multiple attributes.
+                Note that some tags are said to be void and do not use a closing tag and contain no content (even tags that take multiple attributes).
+              </p>
+            </div>
+
+            <div>
+              Examples:
+              <div>
+                The anchor tag for hyperlinks:
+                <pre>
+                  &lt;a href = "google.com"&gt;google.com&lt;/a&gt; = <a href = "google.com">google.com</a>
+                </pre>
+                The image tag for inserting hyperlinks to an html document is a void tag and has multiple attributes:
+                <pre>
+                  &lt;img src = "https://reallylongurl.com" alt = "SMILE!"&gt; = <img src="https://s-media-cache-ak0.pinimg.com/736x/ec/13/a7/ec13a753972c254761be4d9d5666d341.jpg" width = "17.5" height = "16.5" alt="SMILE!">
+                </pre>
+                <p>
+                  <em>Image Source: s-media-cache-ak0.pinimg.com</em>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            DOCUMENTATION
+            <div>
+              <p>
+                The existence and ready accessibiliy of documentation means (thankfully) that memorizing all of the tags and all of the attributes for every tag is not necessary.
+                You are better off using your brain power to understand the broad concepts and hone your problem solving abilities.
+                Most documentation can be found with a simple google search.
+                Additional resources can be found in online forums.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            WHITESPACE
+            <div>
+              <p>
+                It is important to remember that line breaks in the text editor do not translate to line breaks on the html document.
+                Multiple spaces in the text editor become only one space in the html document.
+                New lines are only displayed in the html document if the proper coding is implemented.
+                When a new line is needed, there are a variety of tags available for use.
+                Which tag you should use in any given instance depends on how you want your document to be structured.
+              </p>
+            </div>
+            <div>
+              Examples:
+              <div>
+                The line break tag, an inline tag. This tag is also void, note that there is no closing tag needed.
+                <pre>
+                  &lt;br&gt;
+                </pre>
+                The paragraph tag, creates a different kind of line break involving a block.
+                <pre>
+                  &lt;p&gt;content&lt;/p&gt;
+                </pre>
+              </div>
+              <p>
+                More on block and inline in the next section.
+              </p>
+            </div>
+          </div>
+
+        <div>
+          <b>BLOCK VS INLINE</b>
+          <div>
+            <p>
+              INLINE tags happen "inline" with the other stuff around it in the html document.
+            </P>
+          </div>
+          <div>
+            Examples:
+            <div>
+              <p>
+                The image and line break tags (both seen above) are great examples of inline tags.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p>
+              BLOCK tags put an invisible box around the content it contains.
+              This box has height and width and can be manipulated in various ways.
+            </p>
+            <div>
+              Example:
+              <div>
+                The paragraph tag seen above is a great example of a block tag.
+                See it explicitly in action below.
+                <div>
+                  <pre>
+                    <p>&lt;p&gt;here's one block&lt;/p&gt;</p>
+                    <p>&lt;p&gt;here's another&lt;/p&gt;</p>
+                  </pre>
+                </div>
+              </div>
+              <p>
+                There will be more to come on what you can do with inline and block tags in future lessons.
+              </p>
+            </div>
+        </div>
+
+        <div>
+          <b>DOCUMENT STRUCTURE</b>
+          <div>
+            <p>
+              Certain tags are needed to build the frame around an html document.
+              The frame won't change much in this course.
+              Suffice it to say that these tags are needed for html to work correctly.
+            </p>
+            <div>
+              Example:
+              <div>
+                <pre>
+                  &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                      &lt;head&gt;
+                        &lt;title&gt;Title!&lt;title&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                        &lt;b&gt;<b>Content!</b>&lt;/b&gt;
+                      &lt;/body&gt;
+                    &lt;html&gt;
+                </pre>
+              </div>
+            </div>
+            <p>
+              Note that indentation is crucial to legible code.
+              See above that the html element above has two child elements, head and body, which are indented the same amount.
+              This indentation rule should apply to all parts of your code.
+              Readable code makes it easier for colleagues to read your code and understand its function.
+              Readable code makes it easier for you, the coder, to go back and troubleshoot problems that come up.
+              Indentation is considered a best practice in the world of computer science generally speaking.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h2>
+            LESSON 1 AND 2 SUMMARY
+          </h2>
+          <div>
+            <p>
+              The internet is a large computer network allowing browsers and servers to communicate over vast distances
+            </p>
+          </div>
+          <div>
+            <p>
+              Tags are the basic unit of "speech" in the HTML language. Some tags are used to form blocks to structure a webpage.
+              These blocks can be nested and allow elements of a webpage to be placed and programmed to function with precision.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </body>
+  </html>
